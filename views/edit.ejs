@@ -1,0 +1,19 @@
+<% include C:\Users\ybhadreg\Desktop\nodelist\webapp\views\partials\headder %>
+
+<div class="ui main text container segment">
+<form class="ui form" action="/blog/<%=blog._id%>?_method=put" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[name]" value="<%=blog.name%>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" value="<%=blog.image%>">
+        </div>
+        <div class="field">
+            <label>Post Content</label>
+            <textarea name="blog[Discription]"><%=blog.Discription%></textarea>
+        </div>
+        <button class="ui big violet basic button">update Post</button>
+    <div class="ui big green basic button inline"><a href="/blog">Go back</a> </div>
+    </form>

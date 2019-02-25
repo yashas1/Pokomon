@@ -1,0 +1,18 @@
+<% include C:\Users\ybhadreg\Desktop\nodelist\webapp\views\partials\headder %>
+
+<div class="ui main text container segment">
+<form class="ui form" action="/blog" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[name]">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]">
+        </div>
+        <div class="field">
+            <label>Post Content</label>
+            <textarea name="blog[Discription]"></textarea>
+        </div>
+        <button class="ui big violet basic button">Create Post</button>
+    </form>

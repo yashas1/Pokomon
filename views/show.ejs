@@ -1,0 +1,28 @@
+ <% include C:\Users\ybhadreg\Desktop\nodelist\webapp\views\partials\headder%>   
+
+<div class="ui main text container">
+    
+<div class="ui huge header"><%=blog.name%></div>
+<div class="ui top attached segment">
+<div class="item">
+    <img class="ui centered rounded image"src="<%= blog.image %>">
+ <div class="content">
+	                <div class="meta">
+    	                <span><%= blog.created.toDateString() %></span>
+	                </div>
+            	     <div class="description">
+            	        <p><%- blog.Discription %></p>
+            	     </div>
+	            </div>
+
+
+    </div>
+ <a href="/blog/<%=blog._id%>/edit" class="ui orange basic button">Update Blog</a>
+            <form style="display: inline" method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
+                <button class="ui red basic button" type="submit">Delete Blog</button>
+            </form>
+     <a href="/blog" class="ui pink basic button">Home</a>
+        </div>
+        
+    </div>
+    

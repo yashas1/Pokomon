@@ -1,0 +1,40 @@
+
+<% include C:\Users\ybhadreg\Desktop\nodelist\webapp\views\partials\headder %>
+
+  <div class="ui main text container">
+   	<div class="ui huge header">Blog Site</div>
+    <div class="ui top attached segment">
+<div class="ui divided items">
+<% blog.forEach(function(y){%>
+    
+  <div class="item"> 
+    
+   <div class="image">
+<img  src="<%=y.image%>">
+</div>
+      <div class="content">
+      <a class="header"><%= blog.name %></a>
+      
+      <div class="meta">
+      <span class="cinema"><%=y.created.toDateString() %></span>
+      </div>
+    <div class="discriton"><P><%=y.Discription.substring(0,50)%>....</P></div>  
+<div class="extra">
+	        <a href="/blog/<%=y._id %>" class="ui floated basic violet button">
+	          Read More
+	          <i class="right chevron icon"></i>
+	        </a>
+      </div>
+    </div>
+        </div>
+   <% }) %>
+
+</div>
+        </div>
+    
+ 
+     
+
+    
+    
+  
